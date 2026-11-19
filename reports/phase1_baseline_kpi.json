@@ -1,0 +1,30 @@
+{
+  "sample_size": 500,
+  "business_kpis": {
+    "early_delayed_identification_pct": 90.8,
+    "manual_monitoring_reduction_pct": 42.4,
+    "high_risk_correct_recovery_pct": 87.5,
+    "unnecessary_interventions_reduction_pct": 61.2
+  },
+  "application_model_kpis": {
+    "delay_risk_recall": 0.908,
+    "delay_risk_precision": 0.5704,
+    "delay_risk_f1": 0.7006,
+    "recovery_action_accuracy": 0.948,
+    "macro_f1": 0.9432,
+    "policy_compliance_rate": 0.948,
+    "tool_selection_accuracy": 1.0,
+    "escalation_recall": 1.0
+  },
+  "operational_kpis": {
+    "risk_prediction_latency_p50_ms": 1.0,
+    "risk_prediction_latency_p95_ms": 1.0,
+    "recovery_decision_latency_p50_ms": 23.71,
+    "recovery_decision_latency_p95_ms": 43.31,
+    "end_to_end_latency_p50_ms": 24.71,
+    "end_to_end_latency_p95_ms": 44.31,
+    "avg_tool_calls_per_case": 4.0,
+    "tool_call_failure_rate": 0.0,
+    "workflow_failure_rate": 0.0
+  }
+}

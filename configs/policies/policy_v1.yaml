@@ -1,0 +1,38 @@
+version: "v1.0"
+name: "Order Recovery Policy Baseline"
+description: "Standard operational recovery policy for managing delivery delay risks."
+
+actions:
+  CONTINUE_MONITORING:
+    code: "CONTINUE_MONITORING"
+    description: "Low risk of delay. No operational intervention required; order continues normal fulfillment."
+    conditions:
+      max_risk_score: 0.40
+
+  CONTACT_LOGISTICS:
+    code: "CONTACT_LOGISTICS"
+    description: "Moderate to elevated delay risk on standard-value orders. Inquire with courier or carrier dispatch."
+    conditions:
+      min_risk_score: 0.40
+      max_order_value: 200.0
+
+  PRIORITIZE_SHIPMENT:
+    code: "PRIORITIZE_SHIPMENT"
+    description: "Elevated delay risk on high-value orders ($200+). Request expedited warehouse picking or carrier priority."
+    conditions:
+      min_risk_score: 0.40
+      min_order_value: 200.0
+
+  NOTIFY_CUSTOMER:
+    code: "NOTIFY_CUSTOMER"
+    description: "Severe customer impact case: order delayed with high customer sensitivity, repeat customer risk, or high-value critical segment."
+    conditions:
+      min_risk_score: 0.60
+      customer_impact_severe: true
+
+  HUMAN_ESCALATION:
+    code: "HUMAN_ESCALATION"
+    description: "Uncertain or conflicting signals, tool retrieval errors, or border-line scores requiring human investigation."
+    conditions:
+      uncertainty_band: [0.45, 0.55]
+      conflicting_signals: true

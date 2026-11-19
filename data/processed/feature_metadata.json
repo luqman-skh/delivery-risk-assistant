@@ -1,0 +1,82 @@
+{
+  "target": "Late_delivery_risk",
+  "features": [
+    "Days for shipment (scheduled)",
+    "Benefit per order",
+    "Sales per customer",
+    "Order Item Discount",
+    "Order Item Discount Rate",
+    "Order Item Product Price",
+    "Order Item Profit Ratio",
+    "Order Item Quantity",
+    "Sales",
+    "Order Item Total",
+    "Order Profit Per Order",
+    "Product Price",
+    "order_hour",
+    "order_day_of_week",
+    "order_month",
+    "corridor_delay_risk",
+    "Type",
+    "Shipping Mode",
+    "Customer Segment",
+    "Market",
+    "Order Region",
+    "Department Name",
+    "Category Name"
+  ],
+  "numeric_features": [
+    "Days for shipment (scheduled)",
+    "Benefit per order",
+    "Sales per customer",
+    "Order Item Discount",
+    "Order Item Discount Rate",
+    "Order Item Product Price",
+    "Order Item Profit Ratio",
+    "Order Item Quantity",
+    "Sales",
+    "Order Item Total",
+    "Order Profit Per Order",
+    "Product Price",
+    "order_hour",
+    "order_day_of_week",
+    "order_month",
+    "corridor_delay_risk"
+  ],
+  "categorical_features": [
+    "Type",
+    "Shipping Mode",
+    "Customer Segment",
+    "Market",
+    "Order Region",
+    "Department Name",
+    "Category Name"
+  ],
+  "metadata_columns": [
+    "Order Id",
+    "Customer Id",
+    "Customer City",
+    "Customer Country",
+    "Customer State",
+    "Order City",
+    "Order Country",
+    "Order State",
+    "Product Card Id",
+    "Product Name",
+    "order date (DateOrders)"
+  ],
+  "quarantined_leakage_columns": [
+    "Delivery Status",
+    "Days for shipping (real)",
+    "shipping date (DateOrders)",
+    "Order Status"
+  ],
+  "global_risk_prior": 0.5482854949629242,
+  "train_rows": 126363,
+  "val_rows": 27078,
+  "test_rows": 27078,
+  "class_balance": {
+    "1": 0.5482913155955883,
+    "0": 0.4517086844044117
+  }
+}

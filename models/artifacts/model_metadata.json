@@ -1,0 +1,84 @@
+{
+  "model_type": "XGBoost",
+  "optimal_threshold": 0.37,
+  "test_metrics": {
+    "accuracy": 0.6401876061747545,
+    "delay_recall": 0.8861722906984576,
+    "delay_precision": 0.6203206034889204,
+    "delay_f1": 0.7297889452810827,
+    "roc_auc": 0.7838723573918663,
+    "p50_latency_ms": 0.7474499871022999,
+    "p95_latency_ms": 0.9179749875329434
+  },
+  "target_recall_met": true,
+  "nfr1_latency_met": true,
+  "numeric_features": [
+    "Days for shipment (scheduled)",
+    "Benefit per order",
+    "Sales per customer",
+    "Order Item Discount",
+    "Order Item Discount Rate",
+    "Order Item Product Price",
+    "Order Item Profit Ratio",
+    "Order Item Quantity",
+    "Sales",
+    "Order Item Total",
+    "Order Profit Per Order",
+    "Product Price",
+    "order_hour",
+    "order_day_of_week",
+    "order_month",
+    "corridor_delay_risk"
+  ],
+  "categorical_features": [
+    "Type",
+    "Shipping Mode",
+    "Customer Segment",
+    "Market",
+    "Order Region",
+    "Department Name",
+    "Category Name"
+  ],
+  "top_features_by_gain": [
+    [
+      "Days for shipment (scheduled)",
+      498.04107666015625
+    ],
+    [
+      "corridor_delay_risk",
+      396.61297607421875
+    ],
+    [
+      "Shipping Mode",
+      271.2552795410156
+    ],
+    [
+      "Type",
+      52.3844108581543
+    ],
+    [
+      "order_hour",
+      26.793121337890625
+    ],
+    [
+      "Customer Segment",
+      5.873149871826172
+    ],
+    [
+      "Market",
+      5.8359880447387695
+    ],
+    [
+      "Order Region",
+      5.646185398101807
+    ],
+    [
+      "order_day_of_week",
+      5.5637288093566895
+    ],
+    [
+      "order_month",
+      5.5496039390563965
+    ]
+  ]
+}
